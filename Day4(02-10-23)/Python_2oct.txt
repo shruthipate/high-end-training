@@ -1,0 +1,72 @@
+1)n=int(input())
+def fun(n):
+    if(n==0):
+        return
+    fun(n-1)
+    print(n)
+fun(n)
+
+i/p:5
+o/p:
+1
+2
+3
+4
+5
+
+
+2)n=int(input())
+def fun(n):
+    if(n==0):
+        return
+    print(n)
+    fun(n-1)
+fun(n)
+
+
+i/p:5
+o/p:
+5
+4
+3
+2
+1
+
+
+3)n=input()
+def fun(n):
+    for i in range(0,len(n)//2):                    -->palindrome
+        if(n[i]!=n[len(n)-i-1]):
+            return 0
+    return 1
+print(fun(n))
+
+i/p:abbba
+o/p:1
+
+4)s=input()
+i=0
+j=len(s)-1
+while i<=j:
+    if(s[i]!=s[j]):                            -->palindrome
+        print("No")
+        break
+    i=i+1
+    j=j-1
+else:
+    print("Yes")
+
+i/p:abbba
+o/p:Yes
+    
+5)def fun(s,i,j):
+    if i>j:
+        return True
+    if s[i]!=s[j]:
+        return False                          -->palindrome using recursion
+    return fun(s,i+1,j-1)
+s=input()
+print(fun(s,0,len(s)-1))
+    
+i/p:abbba
+o/p:True
